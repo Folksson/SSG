@@ -7,5 +7,9 @@ def main():
 
     htmlnode = HTMLNode(tag="a", props={"href": "https://www.google.com", "target": "_blank"})
     print(htmlnode)
+
+    def test_to_html_empty_children(self):
+        with self.assertRaises(ValueError):
+            ParentNode(tag="p", children=[])
     
 main()
